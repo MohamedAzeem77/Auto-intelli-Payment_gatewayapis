@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Checkout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&display=swap');
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Update with your image file URL */
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            overflow: hidden; /* Ensures the animated text doesn't create scrollbars */
+            color: white; /* Ensures text is readable on darker background */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(173, 216, 230, 0.9); /* Light blue with transparency */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 24px;
+            color: white;
+            font-family: 'Libre Caslon Text', serif;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .label {
+            font-size: 16px;
+            color: black;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .btn-custom {
+            background-color: orange;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title text-center">Subscription Checkout</div>
+        <form id="checkout-form" method="POST" action="/checkout">
+            <div class="form-group">
+                <label for="customer_email">Email:</label>
+                <input type="email" class="form-control" id="customer_email" name="customer_email" required>
+            </div>
+            <div class="form-group">
+                <label for="subscription_type">Subscription Type:</label>
+                <select class="form-control" id="subscription_type" name="subscription_type" required>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-custom btn-block">Proceed to Checkout</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
